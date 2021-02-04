@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.alex31n.magictextview.MagicTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Magic Test"
+        android:textSize="96sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_bright"
+        app:mtv_innerShadowColor="@color/black"
+        app:mtv_innerShadowDx="1dp"
+        app:mtv_innerShadowDy="1dp"
+        app:mtv_innerShadowRadius="1dp"
+        app:mtv_strokeColor="@android:color/holo_red_dark"
+        app:mtv_strokeJoinStyle="miter"
+        app:mtv_strokeMiter="1dp"
+        app:mtv_strokeWidth="2dp"
+        app:mtv_outerShadowColor="@color/black"
+        app:mtv_outerShadowDx="5dp"
+        app:mtv_outerShadowDy="5dp"
+        app:mtv_outerShadowRadius="5dp"
+        app:fontFamily="@font/playball"/>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MagicTextView">
+        <attr name="mtv_innerShadowColor" format="color"/>
+        <attr name="mtv_innerShadowRadius" format="dimension"/>
+        <attr name="mtv_innerShadowDx" format="dimension"/>
+        <attr name="mtv_innerShadowDy" format="dimension"/>
+
+        <attr name="mtv_outerShadowColor" format="color"/>
+        <attr name="mtv_outerShadowRadius" format="dimension"/>
+        <attr name="mtv_outerShadowDx" format="dimension"/>
+        <attr name="mtv_outerShadowDy" format="dimension"/>
+
+        <!--<attr name="mtv_typeface" format="string" />-->
+
+        <attr name="mtv_foreground" format="reference|color"/>
+        <attr name="mtv_background" format="reference|color"/>
+
+        <attr name="mtv_strokeWidth" format="dimension" />
+        <attr name="mtv_strokeMiter" format="dimension" />
+        <attr name="mtv_strokeColor" format="color" />
+        <attr name="mtv_strokeJoinStyle">
+            <enum name="miter" value="0" />
+            <enum name="bevel" value="1" />
+            <enum name="round" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

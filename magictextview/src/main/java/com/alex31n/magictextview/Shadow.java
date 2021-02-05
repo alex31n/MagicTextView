@@ -49,4 +49,14 @@ public class Shadow {
     public void setColor(@ColorInt int color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Shadow{" +
+                "radius=" + radius +
+                ", dx=" + dx +
+                ", dy=" + dy +
+                ", color=" + color +
+                '}';
+    }
 }

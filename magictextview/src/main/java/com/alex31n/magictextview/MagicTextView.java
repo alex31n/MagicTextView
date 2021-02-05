@@ -35,7 +35,7 @@ public class MagicTextView extends androidx.appcompat.widget.AppCompatTextView {
     private int[] lockedCompoundPadding;
     private boolean frozen = false;
 
-    private WeakHashMap<String, Pair<Canvas, Bitmap>> canvasStore;
+    private WeakHashMap<String, Pair<Canvas, Bitmap>> canvasStore =new WeakHashMap<String, Pair<Canvas, Bitmap>>();;
     private Canvas tempCanvas;
     private Bitmap tempBitmap;
 
@@ -56,8 +56,8 @@ public class MagicTextView extends androidx.appcompat.widget.AppCompatTextView {
         initView();
     }
 
-    public void initView() {
-
+    private void initView() {
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
     }
 
     private void processAttributes(final Context context, final AttributeSet attrs) {
@@ -80,15 +80,6 @@ public class MagicTextView extends androidx.appcompat.widget.AppCompatTextView {
                 this.setForegroundDrawable(foreground);
             } else {
                 this.setTextColor(typedArray.getColor(R.styleable.MagicTextView_mtv_foreground, 0xff000000));
-            }
-        }
-
-        if (typedArray.hasValue(R.styleable.MagicTextView_mtv_background)) {
-            Drawable background = typedArray.getDrawable(R.styleable.MagicTextView_mtv_background);
-            if (background != null) {
-                this.setBackgroundDrawable(background);
-            } else {
-                this.setBackgroundColor(typedArray.getColor(R.styleable.MagicTextView_mtv_background, 0xff000000));
             }
         }
 
@@ -128,9 +119,9 @@ public class MagicTextView extends androidx.appcompat.widget.AppCompatTextView {
             this.setStroke(strokeWidth, strokeColor, strokeJoin, strokeMiter);
         }
 
-        if (innerShadows != null || foregroundDrawable != null) {
-            setLayerType(View.LAYER_TYPE_SOFTWARE, null);
-        }
+//        if (innerShadows != null || foregroundDrawable != null) {
+//            setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+//        }
 
     }
 
